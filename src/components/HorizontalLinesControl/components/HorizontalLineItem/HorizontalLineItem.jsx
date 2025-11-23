@@ -1,5 +1,3 @@
-import cx from 'classnames';
-
 export default function HorizontalLineItem({ line, onDelete }) {
   return (
     <div className="flex items-center justify-between p-3 bg-gray-800 rounded-md hover:bg-gray-750 transition-colors">
@@ -9,14 +7,10 @@ export default function HorizontalLineItem({ line, onDelete }) {
           style={{ backgroundColor: line.color }}
           title={`Color: ${line.color}`}
         />
-        
+
         <div className="flex-1 min-w-0">
-          <div className="text-white font-medium truncate">
-            {line.title}
-          </div>
-          <div className="text-gray-400 text-sm">
-            Price: {line.price.toFixed(2)}
-          </div>
+          <div className="text-white font-medium truncate">{line.title}</div>
+          <div className="text-gray-400 text-sm">Price: {line.price.toFixed(2)}</div>
         </div>
       </div>
 
@@ -30,4 +24,3 @@ export default function HorizontalLineItem({ line, onDelete }) {
     </div>
   );
 }
-

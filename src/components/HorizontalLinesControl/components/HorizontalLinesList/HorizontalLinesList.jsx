@@ -1,4 +1,4 @@
-import HorizontalLineItem from '../HorizontalLineItem/HorizontalLineItem';
+import HorizontalLineItem from "../HorizontalLineItem/HorizontalLineItem";
 
 export default function HorizontalLinesList({ lines, onDeleteLine }) {
   if (lines.length === 0) {
@@ -12,13 +12,8 @@ export default function HorizontalLinesList({ lines, onDeleteLine }) {
   return (
     <div className="space-y-2">
       {lines.map((line) => (
-        <HorizontalLineItem
-          key={line.id}
-          line={line}
-          onDelete={onDeleteLine}
-        />
+        <HorizontalLineItem key={line.id} line={line} onDelete={onDeleteLine} />
       ))}
     </div>
   );
 }
-
